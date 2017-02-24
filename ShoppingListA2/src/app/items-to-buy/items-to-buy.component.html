@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2 round" id="box">
+            <div class="card" style="margin-top: 10px;">
+
+                <h4 class="text-center text-primary" style="margin-top:10px; color:black; font-size:22px;"> <u> <b>Your Grocery List</b> </u> </h4>
+                <!-- Displays if no items -->
+                <p id="noItems" *ngIf="toBuyService.items.length == 0 || itemsCompleted == toBuyService.items.length" class="text-muted text-centered"> You don't have any items to buy yet. </p>
+
+                <!-- To See Items -->
+
+                <div class="card-group">
+                    <div *ngFor="let item of toBuyService.items">
+                        <!--nf For //allows us to loop through an array and render out html for each item in the array; for  -->
+                        <div *ngIf="item.completed == false" style="margin-right: 10px; margin-top: 15px;">
+                            <div class="card">
+                                <div class="card-header">
+                                    <!--
+    <h6 class="text-primary">Item #{{item.taskNumber}}</h6>
+                                </div>
+                                <div class="card-block"> -->
+
+                                    <h2 id="groceryItem" class="card-title"> {{item.title}}
+                                        <button (click)="item.completed = true; itemsCompleted = itemsCompleted + 1" class="btn btn-primary"> X </button> </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--new variable called showItemsBought -->
+
+<items-bought [showItemsBought]="itemsCompleted"></items-bought>

@@ -1,0 +1,45 @@
+#box {
+    border: 5px black solid;
+    background-color: #decabc;
+    margin-top: 5%;
+    padding: 5%;
+}
+
+.card {
+    color: black;
+    margin: 3%;
+}
+
+button {
+    background-color: black;
+    border: black;
+}
+
+button:hover {
+    background-color: greenyellow;
+    border: black;
+    color: black;
+}
+
+button:active {
+    background-color: black;
+    border: black;
+    color: black;
+}
+
+.round {
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+}
+
+#noItems {
+    color: black;
+}
+
+#groceryItem {
+    text-align: center;
+    font-size: 40px;
+    /*    font-family: 'Sunshiney', cursive;  */
+    font-family: 'Just Me Again Down Here', cursive;
+}

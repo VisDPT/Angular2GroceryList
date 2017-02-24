@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2 round" id="createItemBox">
+            <div class="card" style="margin-top: 10px;">
+
+                <div class="card-block">
+                    <form>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Item To Buy</label>
+                            <input [(ngModel)]="itemTitle" type="text" class="form-control" id="formGroupExampleInput" name="itemTitle">
+                        </div>
+
+                        <!-- [(ngModel)]="itemTitle"    -  2 way binds the form input to itemtitle variable; if u type into input, variable changes, if u somehow change from inside the component, it will show it  -->
+
+                        <button (click)="postItem()" class="btn btn-primary">Add Item to Buy</button>
+                        <!--Click directive liks to the postItem function to actually post the info -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
